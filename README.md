@@ -78,11 +78,13 @@ Sending a command to the makeblock frameowrk.
     	}
     }
 
-<b>Authors</b>
+<b>Authors/People that worked on it.</b>
 
-Naimur Rahman/https://github.com/adamtrinity
-Mark Schrijver
-HamzaRDM
+- Naimur Rahman/https://github.com/adamtrinity
+
+- Mark Schrijver
+
+- HamzaRDM
 
 
 Hope you enjoy using this, hacked this side-project in 3-4 hours hence why the code is slightly messy.
