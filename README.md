@@ -86,5 +86,7 @@ Sending a command to the makeblock frameowrk.
 
 - HamzaRDM
 
+- Tyluur (5'9 and not jacked fella who helped me find spelling mistakes)
+
 
 Hope you enjoy using this, hacked this side-project in 3-4 hours hence why the code is slightly messy.
