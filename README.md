@@ -22,12 +22,16 @@ Open mBlock3, and upload the script to your robot. This script was written for t
 
 In mBlock 3 verify the serial port the robot is connected to. This port is currently hardcoded into the Java code and my require changing on your system.
 
-In your IDE of choice, open up the example class: com.ractoc.mblock.communication.example.RunClient
+In your IDE of choice, open up the example class: RunClient
 
 Edit the serial port to the one found in mBlock in the previous step. This can be done on line 27.
 
 portId.getName().equals("COM3")
 Run the RunClient class.
+
+Than proceed to edit the discord bot token and apply your discord bot token.
+
+and then run the Discord.java as the main class.
 
 <b>Explaining the test script</b>
 
