@@ -11,7 +11,7 @@ public class DiscordConstant {
     /**
      * Connection key
      */
-    public static final String BOT_KEY = "NjIzNjAwNTY5NTc5MzM5Nzc3.XYQ44A.O7tQeIqn5WXrM1gaOw21GNNujEk";
+    public static final String BOT_KEY = "NjIzNjAwNTY5NTc5MzM5Nzc3.XYs8Cg.xMiBHJP-CxtZn-HIrEcmqEQyXSY";
 
     /**
      * Prefix commands

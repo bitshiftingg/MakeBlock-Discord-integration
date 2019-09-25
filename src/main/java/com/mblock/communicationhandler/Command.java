@@ -13,6 +13,7 @@ public final class Command {
      * The byte indicating the command to be executed
      */
     private final byte command;
+    
     /**
      * The payload of the command. This content of the payload depends on the command being executed
      */

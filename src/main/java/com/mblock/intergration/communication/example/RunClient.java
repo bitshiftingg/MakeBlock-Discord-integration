@@ -44,7 +44,6 @@ public class RunClient {
 					sender = CommunicationUtil.openConnection(portId, new LightSensorListener());
 					sender.start();
 					System.out.println("Server executed");
-					//runProgram();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -81,6 +80,10 @@ public class RunClient {
 	        // final 1 second interval to make sure all commands are finished before shutting down.
 	        interval(1);
 	}
+	
+	public void randomMovement() {
+		
+	}
 
 	/**
 	 * Sleep interval in seconds. This is done in seconds to keep it in sync with
@@ -103,7 +106,7 @@ public class RunClient {
 	 * @param color The color of all the LED's.
 	 * @return The Command which can be send to the robot.
 	 */
-	private Command setAllOnboardLEDsSingleColor(byte color) {
+	public Command setAllOnboardLEDsSingleColor(byte color) {
 		// to send a color for the onboard LED's, one LED requires 3 color codes (RGB).
 		// here they are simply all set to the same value to generate a uniform color.
 		return new Command((byte) 1,
@@ -119,7 +122,7 @@ public class RunClient {
 	 * @param beat The beat as used in the corresponding block in makeblock
 	 * @return The Command which can be send to the robot.
 	 */
-	private Command playNote(byte note, byte beat) {
+	public Command playNote(byte note, byte beat) {
 		return new Command((byte) 2, new byte[] { note, beat });
 	}
 
@@ -128,7 +131,7 @@ public class RunClient {
 	 *
 	 * @return The Command which can be send to the robot.
 	 */
-	private Command moveStop() {
+	public Command moveStop() {
 		return new Command((byte) 3, new byte[] { (byte) 0 });
 	}
 
@@ -149,7 +152,7 @@ public class RunClient {
 	 * @param sensor The sensor to read
 	 * @return The Command which can be send to the robot.
 	 */
-	private Command sensor(byte sensor) {
+	public Command sensor(byte sensor) {
 		return new Command((byte) 10, new byte[] { sensor });
 	}
 

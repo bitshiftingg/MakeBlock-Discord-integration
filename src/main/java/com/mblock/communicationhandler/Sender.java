@@ -80,4 +80,17 @@ public class Sender implements Callable<Boolean> {
         senderFuture.cancel(true);
         executor.shutdown();
     }
+    
+    public void turnOn() {
+    	senderFuture = executor.submit(this);
+    	System.err.println("Executing turnOn() Method");
+    }
+    
+    public void flushAllPackets(boolean shutdown) {
+    	senderFuture.cancel(true);
+    	if(shutdown) {
+    		executor.shutdown();
+    	}
+    	System.err.println("shutting down");
+    }
 }

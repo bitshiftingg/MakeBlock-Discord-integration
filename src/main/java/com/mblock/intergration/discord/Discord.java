@@ -23,7 +23,7 @@ public class Discord {
     public void start() {
         api = new DiscordApiBuilder().setToken(DiscordConstant.BOT_KEY).login().join();
         EmbedBuilder embed = new EmbedBuilder()
-                .setTitle("MakeBlock Discord Integration for mBot Ranger")
+                .setTitle("MakeBlock Discord Integration for mBot Ranger developed by https://github.com/adamtrinity")
                 .addField("Client Id", String.valueOf(api.getClientId()), true)
                 .addField("Channels", String.valueOf(api.getChannels().size()), true)
                 .addField("Status", String.valueOf(api.getStatus()), true)
