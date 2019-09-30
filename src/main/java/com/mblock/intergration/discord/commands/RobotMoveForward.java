@@ -21,7 +21,7 @@ public class RobotMoveForward implements MessageCreateListener {
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
     	try {
-    		Discord.client.getSender().sendCommand(Discord.client.moveForward((byte) 200));
+    		Discord.client.getSender().sendCommand(Discord.client.moveForward((byte) 3));
             EmbedBuilder embedBuilder = new EmbedBuilder().
                     setTitle("Robot Forward Movement").setColor(Color.green)
                     .addField("The Robot is now moving", "forward."); 

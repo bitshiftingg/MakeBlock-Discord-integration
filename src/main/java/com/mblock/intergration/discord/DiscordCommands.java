@@ -9,6 +9,7 @@ import com.mblock.intergration.discord.commands.BackWardsCommand;
 import com.mblock.intergration.discord.commands.BoogyDanceCommand;
 import com.mblock.intergration.discord.commands.DiscordHelpCommand;
 import com.mblock.intergration.discord.commands.DiscordListCommand;
+import com.mblock.intergration.discord.commands.LocationCommandTest;
 import com.mblock.intergration.discord.commands.PlayNoteCommand;
 import com.mblock.intergration.discord.commands.RandomMovement;
 import com.mblock.intergration.discord.commands.RobotMoveForward;
@@ -31,7 +32,7 @@ public class DiscordCommands {
     public static int execute() {
     	
         COMMANDS.putIfAbsent("commands", new DiscordListCommand());
-        COMMANDS.putIfAbsent("help", new DiscordHelpCommand());
+      //  COMMANDS.putIfAbsent("help", new DiscordHelpCommand());
         COMMANDS.putIfAbsent("move", new RobotMoveForward());
         COMMANDS.putIfAbsent("dance", new BoogyDanceCommand());
         COMMANDS.putIfAbsent("music", new PlayNoteCommand());
@@ -41,6 +42,7 @@ public class DiscordCommands {
         COMMANDS.putIfAbsent("turnright", new TurnRightCommand());
         COMMANDS.putIfAbsent("turnleft", new TurnLeftCommand());
         COMMANDS.putIfAbsent("random", new RandomMovement());
+        COMMANDS.putIfAbsent("loc", new LocationCommandTest());
 
 
         COMMANDS.forEach((com, exe) -> {

@@ -3,9 +3,14 @@ package com.mblock.intergration.communication.example;
 import com.mblock.communicationhandler.*;
 import com.mblock.intergration.discord.Discord;
 
+import net.sf.marineapi.nmea.io.SentenceReader;
+import net.sf.marineapi.provider.PositionProvider;
+import net.sf.marineapi.provider.event.PositionEvent;
+import net.sf.marineapi.provider.event.ProviderListener;
 import purejavacomm.CommPortIdentifier;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,6 +49,19 @@ public class RunClient {
 					sender = CommunicationUtil.openConnection(portId, new LightSensorListener());
 					sender.start();
 					System.out.println("Server executed");
+					/*InputStream socket = null;
+			        SentenceReader nmeaReader = new SentenceReader(socket);
+			        PositionProvider positionProvider = new PositionProvider(nmeaReader);
+			        
+			        positionProvider.addListener(new ProviderListener<PositionEvent>() {
+			            @Override
+			            public void providerUpdate(PositionEvent evt) {
+			                // to format latitude and longitude, see implementation of evt.getPosition().toString()
+			                System.out.println("TPV: " + evt.toString());
+			            }
+			        });
+			        
+			        nmeaReader.start();*/
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -125,7 +143,10 @@ public class RunClient {
 	public Command playNote(byte note, byte beat) {
 		return new Command((byte) 2, new byte[] { note, beat });
 	}
-
+	
+	public Command test() {
+		return new Command((byte) 11, new byte[] { (byte) 0 });
+	}
 	/**
 	 * Creates the command to stop moving.
 	 *
