@@ -11,7 +11,7 @@ import com.mblock.intergration.communication.example.RunClient;
 /**
  * @author Discord: Adam_#6723
  * Github: https://github.com/adamtrinity 
- * Project: University module 1
+ * Project: University module 11
  */
 public class LocationCommandTest implements MessageCreateListener {
 
