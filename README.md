@@ -81,6 +81,19 @@ Sending a command to the makeblock frameowrk.
     		e.printStackTrace();
     	}
     }
+    
+    
+    
+<b>How to setup this project </b>
+
+Download the following:
+
+Eclipse IDE for Java. 
+Lombok from: https://projectlombok.org
+Then to setup lombok, run the lombok.jar file.
+then restart your Eclipse IDE.
+Then once eclipse has re-opened.
+Go to Project, clean and then select the makeblock repo.
 
 <b>Authors/People that worked on it.</b>
 
